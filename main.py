@@ -40,4 +40,4 @@ def getevents():
     s3.Bucket('pyproj21').put_object(Key=str(time)+'/events.json',Body=json_obj)
     return 'SENT TO S3'
 if __name__ == '__main__':
-    app.run(port=8000)
+    app.run(port=4000)
