@@ -1,4 +1,5 @@
-import subprocess
+import requests
 
 
-process = subprocess.call('python3.7 main.py "request.json"', shell=True)
+r = requests.post("http://127.0.0.1:8000/get_events", data={'file': 'request.json'})
+#print(r.status_code, r.reason,r.text)
